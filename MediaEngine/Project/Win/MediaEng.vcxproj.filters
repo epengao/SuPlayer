@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{c07a54b2-b369-4594-acbc-025aa674bdd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork">
+      <UniqueIdentifier>{d18fddbb-1769-481f-b430-08f9b9197aaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{ec33b632-57cd-461b-bfac-39c88b7ce173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Include">
+      <UniqueIdentifier>{1e6e040d-294c-4282-9f6e-40be62331fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Common">
+      <UniqueIdentifier>{e5d8d393-9953-45ef-a2d9-ec151f48169c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Thread">
+      <UniqueIdentifier>{6817f45e-cdd7-455e-8efd-1acf4e73adb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder">
+      <UniqueIdentifier>{5cf00080-3180-4c4c-9c96-bc72893a4e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{abee516a-11cc-403a-82fb-cb247968a861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clock">
+      <UniqueIdentifier>{5ef49fbd-8604-41b7-a874-a27dee08f529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder\VideoDec">
+      <UniqueIdentifier>{df43d080-5562-4d51-be1e-699e5cddf433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder\AudioDec">
+      <UniqueIdentifier>{7746528c-1b3c-4300-86ec-fab4752b5937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\VideoRender">
+      <UniqueIdentifier>{e7651fef-0ef7-49c0-92c0-314e319faa63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\AudioRender">
+      <UniqueIdentifier>{2dda1a77-e5f0-4025-8eaf-20db2bc2f977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a2e66977-ae2b-4e6a-8642-a14db389885d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExAPI">
+      <UniqueIdentifier>{a14af4c4-537f-472f-88f7-3cd99031e68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineWrap">
+      <UniqueIdentifier>{ad80796f-e411-42f9-85d1-9ff10f114d4d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECConfig.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECFile.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECLibraryLoader.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECMathUtil.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECMemOP.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECOSUtil.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECString.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECStringOP.h">
+      <Filter>Base\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECArray.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECBaseType.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECCompare.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECDictionary.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECError.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECLog.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECMutableArray.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECNode.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECPrefDef.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECQueue.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECRingQueue.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECStack.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECType.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECAutoLock.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMsgHandler.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMsgHandlerI.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMutex.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECSemaphore.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECSignal.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECThread.h">
+      <Filter>Base\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Clock\MediaClock.h">
+      <Filter>Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Clock\ClockPort.h">
+      <Filter>Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Source\MediaSource.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Source\SourceBufferManager.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Source\SourcePort.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDec.h">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecoder.h">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecPort.h">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioPCMBufferManager.h">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\FFmpegAudioDec.h">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Source\FFmpegReader.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRend.h">
+      <Filter>Render\AudioRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRender.h">
+      <Filter>Render\AudioRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioWaveScale.h">
+      <Filter>Render\AudioRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\FrameScale.h">
+      <Filter>Render\VideoRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRend.h">
+      <Filter>Render\VideoRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRender.h">
+      <Filter>Render\VideoRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\FFmpegVideoDec.h">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDec.h">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecoder.h">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecPort.h">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Source\Source.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoFrameManager.h">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Framework\Framework.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Common\MediaCommon.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Common\MediaMsgHandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRenderDeviceI.h">
+      <Filter>Render\AudioRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRenderDeviceI.h">
+      <Filter>Render\VideoRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\ExAPI\Win32\MediaEngine.h">
+      <Filter>ExAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioDevice\Win32\SDL_AudioRender.h">
+      <Filter>Render\AudioRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoDevice\Win32\SDL_VideoRender.h">
+      <Filter>Render\VideoRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MediaBase\EngineWrap\Common\MediaEngineWrap.h">
+      <Filter>EngineWrap</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECConfig.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECFile.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECLibraryLoader.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECMathUtil.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECMemOP.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECOSUtil.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECString.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECStringOP.cpp">
+      <Filter>Base\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECAutoLock.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECMsgHandler.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECMutex.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECSemaphore.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECSignal.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECThread.cpp">
+      <Filter>Base\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Clock\MediaClock.cpp">
+      <Filter>Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Clock\ClockPort.cpp">
+      <Filter>Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Source\MediaSource.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Source\SourceBufferManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Source\SourcePort.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecoder.cpp">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecPort.cpp">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioPCMBufferManager.cpp">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\FFmpegAudioDec.cpp">
+      <Filter>Decoder\AudioDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Source\FFmpegReader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioRender.cpp">
+      <Filter>Render\AudioRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioWaveScale.cpp">
+      <Filter>Render\AudioRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\FrameScale.cpp">
+      <Filter>Render\VideoRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\VideoRender.cpp">
+      <Filter>Render\VideoRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\FFmpegVideoDec.cpp">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecoder.cpp">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecPort.cpp">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoFrameManager.cpp">
+      <Filter>Decoder\VideoDec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Framework\Framework.cpp">
+      <Filter>FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Common\MediaMsgHandler.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioDevice\Win32\SDL_AudioRender.cpp">
+      <Filter>Render\AudioRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\VideoDevice\Win32\SDL_VideoRender.cpp">
+      <Filter>Render\VideoRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\EngineWrap\Win32\MediaEngine.cpp">
+      <Filter>EngineWrap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MediaBase\EngineWrap\Common\MediaEngineWrap.cpp">
+      <Filter>EngineWrap</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A380C382-4DB4-43FB-A11E-16231A4729FE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ECPlayer</RootNamespace>
+    <ProjectName>MediaEngine</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>MediaEngine</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MediaEngine</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>avcodec.lib;avformat.lib;avutil.lib;avdevice.lib;avfilter.lib;postproc.lib;swresample.lib;swscale.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../ThirdPart/FFmpeg/Win32/lib;../../ThirdPart/SDL/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>avcodec.lib;avformat.lib;avutil.lib;avdevice.lib;avfilter.lib;postproc.lib;swresample.lib;swscale.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../ThirdPart/FFmpeg/Win32/lib;../../ThirdPart/SDL/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECConfig.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECFile.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECLibraryLoader.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECMathUtil.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECMemOP.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECOSUtil.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECString.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Common\ECStringOP.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECArray.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECBaseType.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECCompare.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECDictionary.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECError.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECLog.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECMutableArray.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECNode.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECPrefDef.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECQueue.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECRingQueue.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECStack.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Include\ECType.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECAutoLock.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMsgHandler.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMsgHandlerI.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECMutex.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECSemaphore.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECSignal.h" />
+    <ClInclude Include="..\..\MediaBase\Base\Thread\ECThread.h" />
+    <ClInclude Include="..\..\MediaBase\Clock\ClockPort.h" />
+    <ClInclude Include="..\..\MediaBase\Clock\MediaClock.h" />
+    <ClInclude Include="..\..\MediaBase\Common\MediaCommon.h" />
+    <ClInclude Include="..\..\MediaBase\Common\MediaMsgHandler.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDec.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecoder.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecPort.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\AudioPCMBufferManager.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\AudioDecoder\FFmpegAudioDec.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\FFmpegVideoDec.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDec.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecoder.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecPort.h" />
+    <ClInclude Include="..\..\MediaBase\Decoder\VideoDecoder\VideoFrameManager.h" />
+    <ClInclude Include="..\..\MediaBase\EngineWrap\Common\MediaEngineWrap.h" />
+    <ClInclude Include="..\..\MediaBase\ExAPI\Win32\MediaEngine.h" />
+    <ClInclude Include="..\..\MediaBase\Framework\Framework.h" />
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioDevice\Win32\SDL_AudioRender.h" />
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRend.h" />
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRender.h" />
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioRenderDeviceI.h" />
+    <ClInclude Include="..\..\MediaBase\Render\AudioRender\AudioWaveScale.h" />
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\FrameScale.h" />
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoDevice\Win32\SDL_VideoRender.h" />
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRend.h" />
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRender.h" />
+    <ClInclude Include="..\..\MediaBase\Render\VideoRender\VideoRenderDeviceI.h" />
+    <ClInclude Include="..\..\MediaBase\Source\FFmpegReader.h" />
+    <ClInclude Include="..\..\MediaBase\Source\MediaSource.h" />
+    <ClInclude Include="..\..\MediaBase\Source\Source.h" />
+    <ClInclude Include="..\..\MediaBase\Source\SourceBufferManager.h" />
+    <ClInclude Include="..\..\MediaBase\Source\SourcePort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECConfig.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECFile.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECLibraryLoader.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECMathUtil.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECMemOP.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECOSUtil.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECString.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Common\ECStringOP.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECAutoLock.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECMsgHandler.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECMutex.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECSemaphore.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECSignal.cpp" />
+    <ClCompile Include="..\..\MediaBase\Base\Thread\ECThread.cpp" />
+    <ClCompile Include="..\..\MediaBase\Clock\ClockPort.cpp" />
+    <ClCompile Include="..\..\MediaBase\Clock\MediaClock.cpp" />
+    <ClCompile Include="..\..\MediaBase\Common\MediaMsgHandler.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecoder.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioDecPort.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\AudioPCMBufferManager.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\AudioDecoder\FFmpegAudioDec.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\FFmpegVideoDec.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecoder.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoDecPort.cpp" />
+    <ClCompile Include="..\..\MediaBase\Decoder\VideoDecoder\VideoFrameManager.cpp" />
+    <ClCompile Include="..\..\MediaBase\EngineWrap\Common\MediaEngineWrap.cpp" />
+    <ClCompile Include="..\..\MediaBase\EngineWrap\Win32\MediaEngine.cpp" />
+    <ClCompile Include="..\..\MediaBase\Framework\Framework.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioDevice\Win32\SDL_AudioRender.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioRender.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\AudioRender\AudioWaveScale.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\FrameScale.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\VideoDevice\Win32\SDL_VideoRender.cpp" />
+    <ClCompile Include="..\..\MediaBase\Render\VideoRender\VideoRender.cpp" />
+    <ClCompile Include="..\..\MediaBase\Source\FFmpegReader.cpp" />
+    <ClCompile Include="..\..\MediaBase\Source\MediaSource.cpp" />
+    <ClCompile Include="..\..\MediaBase\Source\SourceBufferManager.cpp" />
+    <ClCompile Include="..\..\MediaBase\Source\SourcePort.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

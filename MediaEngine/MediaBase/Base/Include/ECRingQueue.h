@@ -1,0 +1,155 @@
+/*
+ * ---------------------------------------------------------------------
+ * Copyright (c) 2014~2016 All Right Reserved
+ * This software is developed for study and improve coding skill ...
+ *
+ * Project:  Enjoyable Coding < EC >
+ *
+ * ECRingQueue.h
+ *
+ * define a Ring Queue which can store any type of data.
+ *
+ * Eamil:  epengao@126.com
+ * Author: Peter Gao
+ * Version: First initinal version.
+ * --------------------------------------------------------------------
+ */
+
+#ifndef EC_RING_QUEUE_H
+#define EC_RING_QUEUE_H
+
+#include "ECType.h"
+#include "ECError.h"
+
+#define EC_RING_QUEUE_SIZE 512
+
+template<typename T>
+class ECRingQueue
+{
+public:
+    ECRingQueue(EC_U32 nSize=EC_RING_QUEUE_SIZE);
+    ~ECRingQueue();
+public:
+    EC_U32 Push(T data);
+    EC_U32 Pop(T *data);
+    EC_U32 Front(T *pData) const;
+    EC_U32 Back(T *pData)  const;
+    EC_BOOL IsFull() const;
+    EC_BOOL IsEmpty() const;
+    EC_U32  Count() const;
+    EC_U32  Size() const;
+    EC_VOID Clean();
+
+private:
+    EC_U32 m_nSize;
+    EC_U32 m_nHead;
+    EC_U32 m_nTail;
+    EC_U32 m_nItemsCount;
+    T*     m_pData;
+};
+
+template<typename T>
+ECRingQueue<T>::ECRingQueue(
+EC_U32 nSize /*=EC_RING_QUEUE_SIZE*/)
+:m_nSize(nSize)
+,m_nHead(0)
+,m_nTail(0)
+,m_nItemsCount(0)
+,m_pData(EC_NULL)
+{
+    m_pData = new T[m_nSize];
+}
+
+template<typename T>
+ECRingQueue<T>::~ECRingQueue()
+{
+    if (m_pData) delete[]m_pData;
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Push(T data)
+{
+    if ((m_nItemsCount >= m_nSize) || (EC_NULL == m_pData))
+        return EC_Err_ContainerFull;
+
+    EC_U32 nPos = (m_nTail % m_nSize);
+    m_pData[nPos] = data;
+    m_nTail++;
+    m_nItemsCount++;
+
+    return EC_Err_None;
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Pop(T *pOutData)
+{
+    if ((m_nItemsCount == 0) || (EC_NULL == m_pData))
+        return EC_Err_ContainerEmpty;
+    if (EC_NULL == pOutData)
+        return EC_Err_BadParam;
+
+    EC_U32 nPos = (m_nHead % m_nSize);
+    *pOutData = m_pData[nPos];
+    m_nHead++;
+    m_nItemsCount--;
+
+    return EC_Err_None;
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Front(T *pOutData) const
+{
+    if ((m_nItemsCount == 0) || (EC_NULL == m_pData))
+        return EC_Err_ContainerEmpty;
+
+    EC_U32 nPos = (m_nHead % m_nSize);
+    *pOutData = m_pData[nPos];
+
+    return EC_Err_None;
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Back(T *pOutData) const
+{
+    if ((m_nItemsCount == 0) || (EC_NULL == m_pData))
+        return EC_Err_ContainerEmpty;
+
+    EC_U32 nPos = (m_nTail-1 % m_nSize);
+    *pOutData = m_pData[nPos];
+
+    return EC_Err_None;
+}
+
+template<typename T>
+EC_BOOL ECRingQueue<T>::IsFull() const
+{
+    return (m_nItemsCount >= m_nSize);
+}
+
+template<typename T>
+EC_BOOL ECRingQueue<T>::IsEmpty() const
+{
+    return (0 == m_nItemsCount);
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Count() const
+{
+    return m_nItemsCount;
+}
+
+template<typename T>
+EC_U32 ECRingQueue<T>::Size() const
+{
+    return m_nSize;
+}
+
+template<typename T>
+EC_VOID ECRingQueue<T>::Clean()
+{
+    m_nHead = 0;
+    m_nTail = 0;
+    m_nItemsCount = 0;
+}
+
+#endif /* EC_RING_QUEUE_H */
