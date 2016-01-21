@@ -1,10 +1,13 @@
-##SuPlayer [Super Player] [速播]
+###SuPlayer [Super Player] [速播]
     A media player with classic UI and easy-to-use.
 
 There are two projects in this product.
 
-##1 MediaEngine
-    MediaEngine implemented base on ffmpeg as its dumxer and audio&video decoder, base on SDL as its video output. Base on MediaEngine SDK you can develop media player with your own UI. Now the SDK interfaces are very simple for study and use.
+###1 MediaEngine
+    MediaEngine implemented base on ffmpeg as its dumxer and audio&video decoder, 
+    base on SDL as its video output. Base on MediaEngine SDK you can develop
+    media player with your own UI. Now the SDK interfaces are very simple for 
+    study and use.
 
 ######MediaEngine SDK export: [MediaEngine.h, MediaEngine.dll]
 
@@ -18,8 +21,9 @@ After build finished SDK files will be exported to   `[SuPlayer]/MediaEngine/Pro
 
 [iOS platform]
 
-##2 SuPlayer
-    SuPlayer is a media player implemented base on MediaEngine. You can take it as sample of MediaEngine SDK. Enjon it.
+###2 SuPlayer
+    SuPlayer is a media player implemented base on MediaEngine. 
+    You can take it as sample of MediaEngine SDK. Enjon it.
 
 ######Compile:
 [Win32 platform]
