@@ -61,6 +61,10 @@
       <AdditionalDependencies>winmm.lib;MediaEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>move "$(TargetDir)SuPlayer.exe" "$(SolutionDir)Product"
+move "$(TargetDir)MediaEngine.dll" "$(SolutionDir)Product"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -84,6 +88,10 @@
       <AdditionalDependencies>winmm.lib;./Release/MediaEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>move "$(TargetDir)SuPlayer.exe" "$(SolutionDir)Product"
+move "$(TargetDir)MediaEngine.dll" "$(SolutionDir)Product"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="..\res\SuPlayer.rc" />

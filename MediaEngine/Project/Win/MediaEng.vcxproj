@@ -52,7 +52,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -65,6 +65,13 @@
       <AdditionalDependencies>avcodec.lib;avformat.lib;avutil.lib;avdevice.lib;avfilter.lib;postproc.lib;swresample.lib;swscale.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../ThirdPart/FFmpeg/Win32/lib;../../ThirdPart/SDL/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)MediaEngine.dll" "SDK_Export"
+copy "$(ProjectDir)..\..\MediaBase\ExAPI\Win32\MediaEngine.h" "SDK_Export"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy SDK files</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -88,6 +95,13 @@
       <AdditionalDependencies>avcodec.lib;avformat.lib;avutil.lib;avdevice.lib;avfilter.lib;postproc.lib;swresample.lib;swscale.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../ThirdPart/FFmpeg/Win32/lib;../../ThirdPart/SDL/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)MediaEngine.dll" "SDK_Export"
+copy "$(ProjectDir)..\..\MediaBase\ExAPI\Win32\MediaEngine.h" "SDK_Export"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy SDK files</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\MediaBase\Base\Common\ECConfig.h" />
