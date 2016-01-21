@@ -1,19 +1,33 @@
 /*
- * ---------------------------------------------------------------------
- * Copyright (c) 2014~2016 All Right Reserved
- * This software is developed for study and improve coding skill ...
- *
- * Project:  Enjoyable Coding< EC >
- *
- * MediaEngine.h
- * This file MedianEngine APIs define.
- * All APIs and other interface define for UI to desgine media player.
- *
- * Eamil:   epengao@126.com
- * Author:  Peter Gao
- * Version: Intial first version.
- * --------------------------------------------------------------------
- */
+* This software is developed for study and improve coding skill ...
+*
+* Project:  Enjoyable Coding< EC >
+* Copyright (C) 2014-2016 Gao Peng
+
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Library General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
+
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* Library General Public License for more details.
+
+* You should have received a copy of the GNU Library General Public
+* License along with this library; if not, write to the Free
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+* ---------------------------------------------------------------------
+* MediaEngine.h
+* This file MedianEngine APIs define.
+* All APIs and other interface define for UI to desgine media player.
+*
+* Eamil:   epengao@126.com
+* Author:  Peter Gao
+* Version: Intial first version.
+* --------------------------------------------------------------------
+*/
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
