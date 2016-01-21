@@ -1,7 +1,8 @@
 ###SuPlayer [Super Player] [速播]
     A media player with classic UI and easy-to-use.
-You can download win32 install file from
+You can download Windows installer file from
 [http://pan.baidu.com/s/1mhh8vSc](http://pan.baidu.com/s/1mhh8vSc)
+
 There are two projects in this product.
 
 ###1 MediaEngine
