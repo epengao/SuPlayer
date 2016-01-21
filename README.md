@@ -1,4 +1,4 @@
-SuPlayer [Super Player]. --- ËÙ²¥
+SuPlayer [Super Player]. --- 速播
 
 There are two projects in this product.
 
