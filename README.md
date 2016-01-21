@@ -43,4 +43,4 @@ Modify [SuPlayer]/MediaEngine/MediaBase/Base/Include/ECPrefDef.h
 line:36 #define EC_OS_Win32 1 ---->  #define EC_OS_iOS 1
 
 ####Contract Me:
-If there is any problem or bugs you found, please send me email: <epengao@126.com>
+If there is any problem or bugs you found, please send me email: <epengao@126.com> Gao Peng
