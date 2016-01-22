@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		9009D4DB1BCD0C8300ECA1D4 /* build */ = {
+		908D18991C528D260020BD32 /* MediaEngine-All */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9009D4DC1BCD0C8300ECA1D4 /* Build configuration list for PBXAggregateTarget "build" */;
+			buildConfigurationList = 908D189B1C528D260020BD32 /* Build configuration list for PBXAggregateTarget "MediaEngine-All" */;
 			buildPhases = (
-				9009D4DF1BCD0C9E00ECA1D4 /* Run Script */,
+				908D189A1C528D260020BD32 /* Run Script */,
 			);
 			dependencies = (
 			);
-			name = build;
+			name = "MediaEngine-All";
 			productName = build;
 		};
 /* End PBXAggregateTarget section */
@@ -1128,10 +1128,6 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = EC;
 				TargetAttributes = {
-					9009D4DB1BCD0C8300ECA1D4 = {
-						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = N8H8MVYSMF;
-					};
 					90B2BA2E1BCCA43900804499 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = N8H8MVYSMF;
@@ -1151,7 +1147,7 @@
 			projectRoot = "";
 			targets = (
 				90B2BA2E1BCCA43900804499 /* MediaEngine */,
-				9009D4DB1BCD0C8300ECA1D4 /* build */,
+				908D18991C528D260020BD32 /* MediaEngine-All */,
 			);
 		};
 /* End PBXProject section */
@@ -1167,7 +1163,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9009D4DF1BCD0C9E00ECA1D4 /* Run Script */ = {
+		908D189A1C528D260020BD32 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1231,7 +1227,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9009D4DD1BCD0C8300ECA1D4 /* Debug */ = {
+		908D189C1C528D260020BD32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACH_O_TYPE = staticlib;
@@ -1242,7 +1238,7 @@
 			};
 			name = Debug;
 		};
-		9009D4DE1BCD0C8300ECA1D4 /* Release */ = {
+		908D189D1C528D260020BD32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACH_O_TYPE = staticlib;
@@ -1433,11 +1429,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9009D4DC1BCD0C8300ECA1D4 /* Build configuration list for PBXAggregateTarget "build" */ = {
+		908D189B1C528D260020BD32 /* Build configuration list for PBXAggregateTarget "MediaEngine-All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9009D4DD1BCD0C8300ECA1D4 /* Debug */,
-				9009D4DE1BCD0C8300ECA1D4 /* Release */,
+				908D189C1C528D260020BD32 /* Debug */,
+				908D189D1C528D260020BD32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

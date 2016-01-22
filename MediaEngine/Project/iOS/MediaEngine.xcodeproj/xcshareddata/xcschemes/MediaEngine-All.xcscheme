@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9009D4DB1BCD0C8300ECA1D4"
-               BuildableName = "build"
-               BlueprintName = "build"
+               BlueprintIdentifier = "908D18991C528D260020BD32"
+               BuildableName = "MediaEngine-All"
+               BlueprintName = "MediaEngine-All"
                ReferencedContainer = "container:MediaEngine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9009D4DB1BCD0C8300ECA1D4"
-            BuildableName = "build"
-            BlueprintName = "build"
+            BlueprintIdentifier = "908D18991C528D260020BD32"
+            BuildableName = "MediaEngine-All"
+            BlueprintName = "MediaEngine-All"
             ReferencedContainer = "container:MediaEngine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9009D4DB1BCD0C8300ECA1D4"
-            BuildableName = "build"
-            BlueprintName = "build"
+            BlueprintIdentifier = "908D18991C528D260020BD32"
+            BuildableName = "MediaEngine-All"
+            BlueprintName = "MediaEngine-All"
             ReferencedContainer = "container:MediaEngine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
