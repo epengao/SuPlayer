@@ -1,9 +1,9 @@
-SuPlayer [Super Player]. --- �ٲ�
+SuPlayer [Super Player]. --- ËÙ²¥
 
 A media player with classic UI and easy-to-use.
-You can download Windows installer file from http://pan.baidu.com/s/1mhh8vSc
+You can download Windows setup file from http://pan.baidu.com/s/1mhh8vSc
 
-There are two projects in this product.
+----------> Before compiling the prodcuts, please read following carefully <----------
 
 1 MediaEngine
 ================
