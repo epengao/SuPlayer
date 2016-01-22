@@ -23,6 +23,12 @@ After build finished SDK files will be exported to   `[SuPlayer]/MediaEngine/Pro
 
 [iOS platform]
 
+MediaEngine Xcode porject file at  `[SuPlayer]/MediaEngine/Project/iOS/MediaEngine.xcodeproj`
+
+After build finished SDK files will be exported to   `[SuPlayer]/MediaEngine/Project/iOS/build/Product`
+
+[Note:] You can select target `MediaEngine-All` to build universal Framework support both simulator and device.
+
 
 ###2 SuPlayer
     SuPlayer is a media player implemented base on MediaEngine. 
@@ -38,6 +44,9 @@ After build finished SuPlayer.exe file will be exported to   `[SuPlayer]/PlayerA
 
 [iOS platform]
 
+SuPlayer Xcode porject file at   `[SuPlayer]/PlayerApp/iOS/SuPlayer/SuPlayer.xcworkspace`
+
+[Note:] If you do not want use SuPlayer.xcworkspace directly, you can first build MediaEngine and then SuPlayer.
 
 ####Contract Me:
 If there is any problem or bugs you found, please send me email: <epengao@126.com> Gao Peng
