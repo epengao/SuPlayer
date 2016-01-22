@@ -23,15 +23,13 @@ After build finished SDK files will be exported to   `[SuPlayer]/MediaEngine/Pro
 
 [iOS platform]
 
-Modify [SuPlayer]/MediaEngine/MediaBase/Base/Include/ECPrefDef.h
-
-line:36 #define EC_OS_Win32 1 ---->  #define EC_OS_iOS 1
 
 ###2 SuPlayer
     SuPlayer is a media player implemented base on MediaEngine. 
     You can take it as sample of MediaEngine SDK. Enjon it.
 
 ######Compile:
+
 [Win32 platform]
 
 SuPlayer win32 VistualStudio porject file at   `[SuPlayer]/PlayerApp/Win/SuPlayer/project/SuPlayer.sln`
@@ -40,9 +38,6 @@ After build finished SuPlayer.exe file will be exported to   `[SuPlayer]/PlayerA
 
 [iOS platform]
 
-Modify [SuPlayer]/MediaEngine/MediaBase/Base/Include/ECPrefDef.h
-
-line:36 #define EC_OS_Win32 1 ---->  #define EC_OS_iOS 1
 
 ####Contract Me:
 If there is any problem or bugs you found, please send me email: <epengao@126.com> Gao Peng
