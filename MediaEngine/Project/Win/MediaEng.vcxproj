@@ -55,7 +55,7 @@
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
     </ClCompile>
@@ -85,7 +85,7 @@ copy "$(ProjectDir)..\..\MediaBase\ExAPI\Win32\MediaEngine.h" "SDK_Export"</Comm
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;../../MediaBase/Source;../../MediaBase/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/EngineWrap/Common;../../MediaBase/Framework;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Base/Include;../../MediaBase/Base/Thread;../../MediaBase/Base/Common;../../MediaBase/ExAPI/Win32;../../MediaBase/Common;../../MediaBase/Source;../../MediaBase/Clock;../../MediaBase/Framework;../../MediaBase/Decoder/AudioDecoder;../../MediaBase/Decoder/VideoDecoder;../../MediaBase/Render/AudioRender;../../MediaBase/Render/VideoRender;../../MediaBase/Render/AudioRender/AudioDevice/Win32;../../MediaBase/Render/VideoRender/VideoDevice/Win32;../../ThirdPart/FFmpeg/Win32/include;../../ThirdPart/SDL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,6 +164,7 @@ copy "$(ProjectDir)..\..\MediaBase\ExAPI\Win32\MediaEngine.h" "SDK_Export"</Comm
     <ClInclude Include="..\..\MediaBase\Source\Source.h" />
     <ClInclude Include="..\..\MediaBase\Source\SourceBufferManager.h" />
     <ClInclude Include="..\..\MediaBase\Source\SourcePort.h" />
+    <ClInclude Include="OS_Def.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\MediaBase\Base\Common\ECConfig.cpp" />

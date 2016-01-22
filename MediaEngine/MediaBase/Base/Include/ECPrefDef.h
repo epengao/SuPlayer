@@ -28,9 +28,9 @@
 * --------------------------------------------------------------------
 */
 
-// EC_OS_Win32
 // EC_OS_iOS
+// EC_OS_Win32
 // EC_OS_Linux
 // EC_OS_Android
 
-#define EC_OS_Win32 1
+#include "OS_Def.h"

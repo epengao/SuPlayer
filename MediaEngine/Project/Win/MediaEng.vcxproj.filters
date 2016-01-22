@@ -231,6 +231,9 @@
     <ClInclude Include="..\..\MediaBase\EngineWrap\Common\MediaEngineWrap.h">
       <Filter>EngineWrap</Filter>
     </ClInclude>
+    <ClInclude Include="OS_Def.h">
+      <Filter>Base\Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\MediaBase\Base\Common\ECConfig.cpp">
