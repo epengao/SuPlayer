@@ -3,9 +3,7 @@
 You can download Windows installer file from
 [http://pan.baidu.com/s/1mhh8vSc](http://pan.baidu.com/s/1mhh8vSc)
 
-
-
-[----------> Before compiling the prodcuts, please read following carefully <----------]
+#####----------> Before compiling the prodcuts, please read following carefully <----------
 
 There are two projects in this product.
 
