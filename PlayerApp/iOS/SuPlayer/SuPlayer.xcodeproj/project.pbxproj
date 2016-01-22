@@ -15,10 +15,10 @@
 		818E9BBD1BE9FCA900FB4C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818E9BBB1BE9FCA900FB4C96 /* LaunchScreen.storyboard */; };
 		818E9BC61BE9FD4E00FB4C96 /* MediaFileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E9BC51BE9FD4E00FB4C96 /* MediaFileTableViewController.m */; };
 		81A8254C1BEB2461005209CC /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A8254B1BEB2461005209CC /* PlayVideoViewController.m */; };
+		905676BF1C522EE80073D90A /* MediaEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905676BE1C522EE80073D90A /* MediaEngine.framework */; };
 		906B56981BEBBE5300EA594C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B56971BEBBE5300EA594C /* libz.1.2.5.tbd */; };
 		906B569A1BEBBE5C00EA594C /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B56991BEBBE5C00EA594C /* libiconv.2.4.0.tbd */; };
 		906B569C1BEBBE7000EA594C /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B569B1BEBBE7000EA594C /* libbz2.1.0.tbd */; };
-		906B569E1BEBBE8200EA594C /* MediaEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B569D1BEBBE8200EA594C /* MediaEngine.framework */; };
 		906B56A01BEBC2A500EA594C /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B569F1BEBC2A500EA594C /* CoreAudio.framework */; };
 		906B56A21BEBC2B200EA594C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B56A11BEBC2B200EA594C /* AudioToolbox.framework */; };
 		906B56A41BEBC2BF00EA594C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906B56A31BEBC2BF00EA594C /* CoreGraphics.framework */; };
@@ -42,10 +42,10 @@
 		818E9BC51BE9FD4E00FB4C96 /* MediaFileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFileTableViewController.m; sourceTree = "<group>"; };
 		81A8254A1BEB2461005209CC /* PlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoViewController.h; sourceTree = "<group>"; };
 		81A8254B1BEB2461005209CC /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
+		905676BE1C522EE80073D90A /* MediaEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaEngine.framework; path = ../../../MediaEngine/Project/iOS/build/Product/MediaEngine.framework; sourceTree = "<group>"; };
 		906B56971BEBBE5300EA594C /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		906B56991BEBBE5C00EA594C /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		906B569B1BEBBE7000EA594C /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
-		906B569D1BEBBE8200EA594C /* MediaEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MediaEngine.framework; sourceTree = "<group>"; };
 		906B569F1BEBC2A500EA594C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		906B56A11BEBC2B200EA594C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		906B56A31BEBC2BF00EA594C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 				906B56A61BEBC2F400EA594C /* UIKit.framework in Frameworks */,
 				906B56A01BEBC2A500EA594C /* CoreAudio.framework in Frameworks */,
 				906B56AA1BEBC38400EA594C /* CoreMedia.framework in Frameworks */,
-				906B569E1BEBBE8200EA594C /* MediaEngine.framework in Frameworks */,
+				905676BF1C522EE80073D90A /* MediaEngine.framework in Frameworks */,
 				906B56A21BEBC2B200EA594C /* AudioToolbox.framework in Frameworks */,
 				906B56A81BEBC33000EA594C /* AVFoundation.framework in Frameworks */,
 				906B56A41BEBC2BF00EA594C /* CoreGraphics.framework in Frameworks */,
@@ -96,8 +96,8 @@
 			children = (
 				906B56951BEBBDA500EA594C /* UI */,
 				906B56941BEBBD9400EA594C /* Classes */,
-				906B56931BEBBD7300EA594C /* MediaEngine */,
 				906B56961BEBBDD300EA594C /* SystemLib */,
+				906B56931BEBBD7300EA594C /* MediaEngine */,
 				818E9BAD1BE9FCA900FB4C96 /* Supporting Files */,
 				818E9BBE1BE9FCA900FB4C96 /* Info.plist */,
 			);
@@ -115,7 +115,7 @@
 		906B56931BEBBD7300EA594C /* MediaEngine */ = {
 			isa = PBXGroup;
 			children = (
-				906B569D1BEBBE8200EA594C /* MediaEngine.framework */,
+				905676BE1C522EE80073D90A /* MediaEngine.framework */,
 			);
 			name = MediaEngine;
 			path = ..;
@@ -354,6 +354,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../MediaEngine/Project/iOS/build/Product/",
 				);
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = SuPlayer/Info.plist;
@@ -373,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../MediaEngine/Project/iOS/build/Product/",
 				);
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = SuPlayer/Info.plist;
