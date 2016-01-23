@@ -2,7 +2,7 @@
     A media player with classic UI and easy-to-use.
 You can download Windows setup file from [http://pan.baidu.com/s/1mhh8vSc](http://pan.baidu.com/s/1mhh8vSc)
 
-#####----------> Before compiling the prodcuts, please read following carefully <----------
+#####----------> Before compiling the prodcut, please read following carefully <----------
 
 There are two projects in this product.
 
