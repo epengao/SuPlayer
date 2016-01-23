@@ -28,6 +28,19 @@
     [self getVideoFileList];
     [self.tableView reloadData];
     self.mediaEngine = [MediaEngine sharedMediaEngine];
+    
+    if(videoFileList.count <= 0)
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Video File List Empty"
+                                                                                 message:@"Please use iTunes to add video files to App Document folder."
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            NSLog(@"Tap OK button");
+        }];
+        
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (void)dealloc
