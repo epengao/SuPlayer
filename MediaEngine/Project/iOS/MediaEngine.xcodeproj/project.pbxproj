@@ -1380,7 +1380,7 @@
 				INFOPLIST_FILE = MediaEngine/Info.plist;
 				INSTALL_PATH = "$(PROJECT_DIR)/build/Product";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../ThirdPart/FFmpeg/iOS/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../Thirdparty/FFmpeg/iOS/lib";
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1388,7 +1388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.ec.com.MediaEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../ThirdPart/FFmpeg/iOS/Include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../Thirdparty/FFmpeg/iOS/Include";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
@@ -1413,7 +1413,7 @@
 				INFOPLIST_FILE = MediaEngine/Info.plist;
 				INSTALL_PATH = "$(PROJECT_DIR)/build/Product";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../ThirdPart/FFmpeg/iOS/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../Thirdparty/FFmpeg/iOS/lib";
 				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1421,7 +1421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.ec.com.MediaEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../ThirdPart/FFmpeg/iOS/Include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../Thirdparty/FFmpeg/iOS/Include";
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Release;
