@@ -33,6 +33,8 @@
 #include "ECAutoLock.h"
 #include "MediaSource.h"
 
+#define PURE_AUDIO_AVPKT_COUNT 8
+
 
 MediaSource::MediaSource()
 :m_pPort(EC_NULL)
@@ -73,7 +75,10 @@ EC_U32 MediaSource::Init(EC_CONST_PCHAR pMediaPath, MediaEngNotify *pNotify)
     }
     else return EC_Err_Memory_Low;
 
-    m_pBufferManager = new SourceBufferManager();
+    if (m_pMediaInfo->m_nVideoIndex < 0)
+        m_pBufferManager = new SourceBufferManager(PURE_AUDIO_AVPKT_COUNT);
+    else
+        m_pBufferManager = new SourceBufferManager();
     if (EC_NULL == m_pBufferManager) return EC_Err_Memory_Low;
 
     m_pThread = new ECThread(this, (EC_PCHAR)"MediaSource");

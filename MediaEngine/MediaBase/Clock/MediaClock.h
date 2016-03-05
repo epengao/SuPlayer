@@ -61,6 +61,7 @@ public:
 private:
     ClockPort*        m_pPort;
     TimeStamp         m_nTime;
+    TimeStamp         m_nLastSet;
     TimeStamp         m_nLastUpdate;
     MediaClock_Status m_nStatu;
 };

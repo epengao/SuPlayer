@@ -283,6 +283,7 @@ EC_VOID Framework::DoPlay()
     //Sleep(20);
     if (m_pAudioRender) m_pAudioRender->Run();
     if (m_pVideoRender) m_pVideoRender->Run();
+    if (m_pMediaClock) m_pMediaClock->Run();
     m_nStatus = MediaEngStatus_Playing;
 }
 

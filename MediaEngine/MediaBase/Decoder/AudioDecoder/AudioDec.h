@@ -44,7 +44,8 @@ extern "C" {
 #define    Audio_Dec_Err_OpenDecoderFaild      0x0000A002
 #define    Audio_Dec_Err_DecDataFaild          0x0000A003
 #define    Audio_Dec_Err_NeedRetry             0x0000A004
-#define    Audio_Dec_Err_EndOfPlayback         0x0000A005
+#define    Audio_Dec_Err_Continue              0x0000A005
+#define    Audio_Dec_Err_EndOfPlayback         0x0000A006
 
 /* Audio PCM Buffer */
 #define AudioPCMBuffer void

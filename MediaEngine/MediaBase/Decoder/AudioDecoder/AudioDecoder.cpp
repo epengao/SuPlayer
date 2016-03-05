@@ -28,10 +28,12 @@
 * --------------------------------------------------------------------
 */
 
+#include "ECOSUtil.h"
 #include "AudioDec.h"
 #include "AudioDecPort.h"
 #include "AudioDecoder.h"
 
+#define PURE_AUDIO_BUF_COUNT 32
 
 AudioDecoder::AudioDecoder()
 :m_bEOS(EC_FALSE)
@@ -78,7 +80,10 @@ EC_U32 AudioDecoder::Init(MediaCtxInfo* pMediaInfo,
     }
     else return EC_Err_Memory_Low;
 
-    m_pBufferManager = new AudioPCMBufferManager();
+    if (pMediaInfo->m_nVideoIndex < 0)
+        m_pBufferManager = new AudioPCMBufferManager(PURE_AUDIO_BUF_COUNT);
+    else
+        m_pBufferManager = new AudioPCMBufferManager();
     if (EC_NULL == m_pBufferManager)
     {
         delete m_pPort; m_pPort = EC_NULL;
@@ -199,27 +204,49 @@ EC_VOID AudioDecoder::DecodeAudio()
     if (!m_pBufferManager->IsAudioPCMBufferQueueFull())
     {
         EC_U32 nRet = EC_Err_None;
+        EC_U32 nPushBufRet = EC_Err_None;
         SourceBuffer* pSourceBuf = EC_NULL;
+        AudioPCMBuffer* pTmpPCMBuf = EC_NULL;
         AudioPCMBuffer* pAudioPCMBuf = EC_NULL;
 
         nRet = m_pSourcePort->GetAudioBuffer(&pSourceBuf);
         if (pSourceBuf && (EC_Err_None == nRet))
         {
-            AudioPCMBuffer* pTmpPCMBuf = EC_NULL;
-            nRet = m_pFFmpegAudioDec->DecodeAudio(pSourceBuf, &pTmpPCMBuf);
-            if (pTmpPCMBuf && (EC_Err_None == nRet))
+            do
             {
-                m_pBufferManager->PopReuseAudioPCMBuffer(&pAudioPCMBuf);
-                if (pAudioPCMBuf == EC_NULL)
+                pTmpPCMBuf = EC_NULL;
+                pAudioPCMBuf = EC_NULL;
+                nRet = m_pFFmpegAudioDec->DecodeAudio(pSourceBuf, &pTmpPCMBuf);
+                if( pTmpPCMBuf &&
+                    ((Audio_Dec_Err_None == nRet) ||
+                     (Audio_Dec_Err_Continue == nRet)) )
                 {
-                    pAudioPCMBuf = m_pFFmpegAudioDec->AllocAudioPCMBuffer();
+                    m_pBufferManager->PopReuseAudioPCMBuffer(&pAudioPCMBuf);
+                    if (pAudioPCMBuf == EC_NULL)
+                    {
+                        pAudioPCMBuf = m_pFFmpegAudioDec->AllocAudioPCMBuffer();
+                    }
+                    m_pFFmpegAudioDec->CopyAudioPCMBuffer(&pAudioPCMBuf, pTmpPCMBuf);
+                    nPushBufRet = m_pBufferManager->PushAudioPCMBuffer(pAudioPCMBuf);
+                    
+                    if (nPushBufRet != EC_Err_None)
+                    {
+                        EC_U32 nTryTimes = 0;
+                        EC_U32 nMaxTryTimes = 200;
+                        do
+                        {
+                            ecSleep(5);
+                            nPushBufRet = m_pBufferManager->PushAudioPCMBuffer(pAudioPCMBuf);
+                            if (nPushBufRet == EC_Err_None) break;
+                            nTryTimes++;
+                        }while (nTryTimes < nMaxTryTimes);
+                        if (nPushBufRet != EC_Err_None)
+                        {
+                            m_pFFmpegAudioDec->ReleaseAudioPCMBuffer(pAudioPCMBuf);
+                        }
+                    }
                 }
-                m_pFFmpegAudioDec->CopyAudioPCMBuffer(&pAudioPCMBuf, pTmpPCMBuf);
-                if (EC_Err_None != m_pBufferManager->PushAudioPCMBuffer(pAudioPCMBuf))
-                {
-                    m_pFFmpegAudioDec->ReleaseAudioPCMBuffer(pAudioPCMBuf);
-                }
-            }
+            } while (Audio_Dec_Err_Continue == nRet);
             m_pSourcePort->ReturnAudioBuffer(pSourceBuf);
         }
         else if (Media_AudioPlayback_EOS == nRet)

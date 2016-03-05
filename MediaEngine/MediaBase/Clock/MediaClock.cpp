@@ -35,6 +35,7 @@
 MediaClock::MediaClock()
 :m_pPort(EC_NULL)
 ,m_nTime(0)
+,m_nLastSet(0)
 ,m_nLastUpdate(0)
 ,m_nStatu(MediaClock_Status_Stoped)
 {
@@ -84,7 +85,11 @@ TimeStamp MediaClock::GetClockTime()
 
 EC_VOID MediaClock::UpdateClockTime(TimeStamp nTime)
 {
+    if (MediaClock_Status_Running == m_nStatu)
+        if (m_nLastSet == nTime) return;
+
     m_nTime = nTime;
+    m_nLastSet = nTime;
     m_nLastUpdate = ecGetSystemTime();
 }
 

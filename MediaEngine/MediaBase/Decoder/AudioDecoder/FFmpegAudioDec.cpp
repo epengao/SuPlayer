@@ -148,8 +148,12 @@ EC_U32 FFmpegAudioDec::DecodeAudio(EC_VOIDP pInputData, EC_VOIDP* ppAudioPCMBuff
         else if (pAudioData->pts != AV_NOPTS_VALUE)
             pts = pAudioData->pts;
         m_pPCM->pts = m_TimeBase * pts * TIME_UNIT;
+
         *ppAudioPCMBuffer = m_pPCM;
-        nRet = Audio_Dec_Err_None;
+        if (decRet < pAudioData->size)
+            nRet = Audio_Dec_Err_Continue;
+        else
+            nRet = Audio_Dec_Err_None;
         //printf("DecoAudioTime = %d\n", m_pPCM->pts);
     }
     else nRet = Audio_Dec_Err_NeedRetry;
