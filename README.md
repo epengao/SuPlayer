@@ -1,6 +1,6 @@
 ###SuPlayer [Super Player] [速播]
     A media player with classic UI and easy-to-use.
-You can download Windows setup file from [http://pan.baidu.com/s/1kUmDBbp](http://pan.baidu.com/s/1mhh8vSc)
+You can download Windows setup file from [http://pan.baidu.com/s/1kUmDBbp](https://github.com/epengao/SuPlayer/blob/master/Product/SuPlayer_Setup.msi)
 
 #####----------> Before compiling the prodcut, please read following carefully <----------
 
